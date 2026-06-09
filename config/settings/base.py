@@ -210,8 +210,8 @@ SPECTACULAR_SETTINGS = {
 # Redis Cache
 CACHES = {
     "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": config("REDIS_BACKEND"),
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+      
     },
 }
 CACHE_MIDDLEWARE_ALIAS = "default"
