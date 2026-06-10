@@ -1,36 +1,63 @@
-# Django Ecommerce API
+:
 
-An E-commerce API built using Django Rest Framework.
+🛒 E-Commerce Backend API
 
-## Basic Features
-- Registration using either phone number or email https://github.com/earthcomfy/drf-phone-email-auth
-- Basic E-commerce features.
-- Custom permissions set for necessary endpoints.
-- Payment integration using Stripe.
-- Documentation using [DRF Spectacular](https://drf-spectacular.readthedocs.io/en/latest/)
-- Dockerized for local development and production
+A scalable RESTful E-Commerce Backend API built with Django REST Framework. The application provides authentication, product management, order processing, payment integration, and secure API endpoints for modern e-commerce platforms.
 
-## Technologies Used
-- Django Rest Framework
-- PostgreSQL
-- Celery
-- Redis
-- Nginx
-- Docker
-- Stripe
+✨ Features
+JWT Authentication and User Management
+Product CRUD Operations with Categories
+Order Management and Checkout System
+Payment Gateway Integration (Stripe)
+Email Verification and Password Reset
+API Documentation using DRF Spectacular
+PostgreSQL Database Support
+Secure REST APIs with Django REST Framework
 
-## ER Diagram
-Here is the Entity-Relationship diagram generated using https://dbdiagram.io/
+🛠️ Tech Stack
+Technology	Purpose
+Python	Backend Development
+Django	Web Framework
+Django REST Framework	API Development
+PostgreSQL	Database
+JWT	Authentication
+Stripe	Payment Processing
+Git & GitHub	Version Control
+Render	Deployment
 
-![ER-Diagram](https://user-images.githubusercontent.com/66206865/192154014-3299110f-9ab7-4bd2-9dc0-aa6790074ed9.png)
+📂 Project Structure
+ecommerce-api/
+├── config/
+├── users/
+├── products/
+├── orders/
+├── payment/
+├── requirements.txt
+├── manage.py
+└── README.md
 
-## Getting Started
+🚀 Installation
+git clone https://github.com/mahii-crypto/E-Commerce-Backend-API.git
 
-Clone this repository to your local machine and rename the `.env.example` file found in the root directory of the project to `.env` and update the environment variables accordingly.
+cd E-Commerce-Backend-API
 
-```
-$ docker-compose up
-$ docker-compose exec web python manage.py createsuperuser
-```
+pip install -r requirements.txt
 
-Navigate to http://localhost:8000/admin/
+python manage.py migrate
+
+python manage.py runserver
+
+🔌 API Endpoints
+Method	Endpoint	Description
+POST	/api/user/register/	User Registration
+POST	/api/user/login/	User Login
+GET	/api/products/	List Products
+POST	/api/user/orders/	Create Order
+POST	/api/user/payments/	Process Payment
+🌐 Deployment
+
+Backend deployed on Render.
+
+👨‍💻 Author
+
+Mahesh
